@@ -1,0 +1,31 @@
+\documentclass[]{beamer}
+
+\input{preamble}
+
+%%%%%%%%%%
+\title[Replicated List]{\titletext}
+\subtitle{--- The Jupiter Protocol Revisited \\[10pt] \teal{(Brief Announcement at PODC'2018)}}
+
+\author[Hengfeng Wei]{\large {\bf Hengfeng Wei}, Yu Huang, Jian Lu}
+% \titlegraphic{\includegraphics[height = 2.0cm]{figs/qrcode-ps-2017-2nd.png}}
+\institute{Nanjing University}
+\date{July 24, 2018}
+
+\AtBeginSection[]{
+  \begin{frame}[noframenumbering, plain]
+    \frametitle{\titletext}
+    \tableofcontents[currentsection, sectionstyle=show/shaded, subsectionstyle=show/show/hide]
+  \end{frame}
+}
+%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\input{parts/overview}
+
+\thankyou{}
+\input{suggestion}
+
+\end{document}
+%%%%%%%%%%
