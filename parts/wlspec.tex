@@ -1,2 +1,47 @@
 % file: parts/wlspec.tex
 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\Huge \teal{Weak List Specification}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \begin{definition}[Weak List Specification \wlspec{}~\cite{Attiya:PODC16}]
+    Informally, \wlspec{} requires the ordering between \red{elements that are not deleted} to be consistent across the system.
+  \end{definition}
+
+  \pause
+  \vspace{1.00cm}
+  \begin{definition}[Pairwise State Compatibility Property]
+    \[
+      \forall \sigma, \sigma': a, b \in \sigma \cap \sigma' \implies (a \prec_{\sigma} b \iff a \prec_{\sigma'} b)
+    \]
+  \end{definition}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \begin{definition}[Pairwise State Compatibility Property]
+    \[
+      \forall \sigma, \sigma': a, b \in \sigma \cap \sigma' \implies (a \prec_{\sigma} b \iff a \prec_{\sigma'} b)
+    \]
+  \end{definition}
+
+  \vspace{0.60cm}
+  \begin{columns}
+    \column{0.50\textwidth}
+      \pause
+      \fignocaption{width = 0.60\textwidth}{figs/ex-weak-list-spec}
+      \vspace{-0.60cm}
+      \fignocaption{width = 0.40\textwidth}{figs/red-cross}
+    \column{0.50\textwidth}
+      \pause
+      \fignocaption{width = 0.75\textwidth}{figs/ex-strong-list-spec}
+      \vspace{-0.60cm}
+      \fignocaption{width = 0.30\textwidth}{figs/green-check}
+  \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
