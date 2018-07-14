@@ -29,7 +29,7 @@
   \centerline{\Large \teal{Replication {\normalsize (for availability)}}}
   \vspace{-0.20cm}
   
-  \fignocaption{width = 0.60\textwidth}{figs/googledoc-replication}
+  \fignocaption{width = 0.50\textwidth}{figs/googledoc-replication}
 
   \pause
   \vspace{-0.50cm}
@@ -43,7 +43,7 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\Large \teal{Replicated List}}
+  \centerline{\Large \teal{List}}
   \vspace{0.30cm}
 
   \begin{center}
@@ -59,21 +59,21 @@
 
   \pause
   \vspace{0.80cm}
-  \centerline{\large \red{To implement a highly available replicated list object.}}
+  \centerline{\large \red{To implement a highly available \teal{\Large replicated list} object.}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \begin{definition}[Eventual Convergence]
-    The final lists at all replicas are identical \purple{\it at quiescence}.
+  \begin{definition}[Eventual Convergence (EC)~\cite{}]
+    The lists at all replicas are identical \purple{\it at quiescence}.
   \end{definition}
 
   \vspace{-0.30cm}
   \fignocaption{width = 0.25\textwidth}{figs/specs}
   \vspace{-0.50cm}
 
-  \begin{definition}[Strong Eventual Consistency]
+  \begin{definition}[Strong Eventual Consistency (SEC)~\cite{}]
     The lists at the replicas that \purple{\it have executed the same set of user operations} are identical.
   \end{definition}
 
@@ -89,16 +89,19 @@
 
   \vspace{0.30cm}
   \begin{center}
-    \red{\large Strong/Weak List Specification} \\[6pt]
-    \teal{Global properties on all possible states at all replicas.}
+    \red{\large Strong/Weak List Specification~\cite{}} \\[6pt]
+    \teal{Specify global properties on all (intermediate) states at all replicas.}
   \end{center}
 
   \pause
-  \begin{description}
-    \item[Proved:] CRDT~\footnote{CRDT: Conflict-free Replicated Data Types~\cite{Shapiro:SSS11}}-based RGA~\cite{Roh:JPDC11} protocol
-      satisfies the strong list spec.
-    \item[Conjecture:] OT~\footnote{OT: Operational Transformation~\cite{Ellis:SIGMOD89}}-based \textsl{\red{Jupiter}}~\cite{Nichols:UIST95} protocol
-      satisfies the weak list spec.
-  \end{description}
+  \vspace{0.30cm}
+  \begin{center}
+    \begin{minipage}{0.70\textwidth}
+      \begin{description}
+	\item[Proved:] RGA~\cite{Roh:JPDC11} satisfies the strong list spec.
+	\item[Conjecture:] \textsl{\red{Jupiter}}~\cite{Nichols:UIST95} satisfies the weak list spec.
+      \end{description}
+    \end{minipage}
+  \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
