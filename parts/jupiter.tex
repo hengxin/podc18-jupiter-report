@@ -8,20 +8,53 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  c/s
-
-  still challenging
+  \begin{columns}
+    \column{0.50\textwidth}
+      \begin{center}
+	\input{tikz/jupiter-cs-tikz}
+      \end{center}
+    \column{0.45\textwidth}
+      System model of Jupiter: \\[5pt]
+      \begin{itemize}
+	\setlength{\itemsep}{10pt}
+	\item<1-> client-server architecture
+	\item<2-> client $\xrightarrow[]{\quad \text{FIFO} \quad}$ server
+	\item<3-> totally ordered at the server
+	\item<4-> server $\xrightarrow[]{\quad \text{FIFO} \quad}$ client
+      \end{itemize}
+  \end{columns}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  ot
+  \centerline{OT (Operational Transformation)~\cite{}}
+
+  \pause
+  \begin{columns}
+    \column{0.40\textwidth}
+      \begin{center}
+	\input{tikz/no-ot-tcs06-tikz}
+      \end{center}
+    \column{0.40\textwidth}
+      \begin{center}
+	\input{tikz/ot-tcs06-tikz}
+      \end{center}
+  \end{columns}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
+  \centerline{\large Jupiter: How and when to perform OTs?}
+
+  \fignocaption{width = 0.50\textwidth}{figs/jupiter-schedule}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \fignocaption{width = 0.65\textwidth}{figs/jupiter-illustration-client3-notations}
   example execution
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
