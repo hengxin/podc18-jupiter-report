@@ -46,7 +46,28 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\large Jupiter: How and when to perform OTs?}
+  \fignocaption{width = 0.40\textwidth}{figs/ot}
+
+  \[
+    \sigma; o_1; o_2' \equiv \sigma; o_2; o_1'~\cite{}
+  \]
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \begin{center}
+    {\large Jupiter uses \red{$2D$ state spaces}~\cite{} \\
+    to manage how and when to perform OTs.}
+  \end{center}
+
+  fig here
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\large Consider a replicated system with $n$ clients.}
 
   \fignocaption{width = 0.50\textwidth}{figs/jupiter-schedule}
 \end{frame}
@@ -54,7 +75,28 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
+  \centerline{\large Each \red{client} maintains a $2D$ state space.}
+
   \fignocaption{width = 0.65\textwidth}{figs/jupiter-illustration-client3-notations}
-  example execution
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\large The \red{server} maintains $n$ $2D$ state spaces, one for each client.}
+
+  \fignocaption{width = 0.65\textwidth}{figs/jupiter-illustration-client3-notations}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \begin{center}
+    {\large \red{Global property} on all replica states \\ specified by the \blue{weak list specification}}
+
+    \fignocaption{width = 0.30\textwidth}{figs/mismatch}
+
+    {\large \red{Local view} each replica maintains in \blue{Jupiter}}
+  \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%

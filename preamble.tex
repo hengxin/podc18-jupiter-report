@@ -1,4 +1,5 @@
-% File: preamble.tex
+% file: preamble.tex
+
 \usepackage{lmodern}
 
 % \usepackage{xeCJK}
@@ -13,12 +14,12 @@
 \newcommand{\set}[1]{\left\{#1\right\}}
 \newcommand{\ps}[1]{\mathcal{P}(#1)}
 \usepackage{bm}
-\DeclareMathOperator*{\argmin}{\arg\!\min}
-\DeclareMathOperator*{\E}{\mathbb{E}}
 
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \newcommand{\hStatex}[0]{\vspace{5pt}}
+
+\newtheorem*{prop}{Proposition}
 
 % colors
 \newcommand{\red}[1]{\textcolor{red}{#1}}
@@ -41,12 +42,6 @@
 \newcommand{\gbox}[1]{\green{\boxed{#1}}}
 \newcommand{\bbox}[1]{\blue{\boxed{#1}}}
 \newcommand{\pbox}[1]{\purple{\boxed{#1}}}
-
-\usepackage{pifont}
-\usepackage{wasysym}
-
-\newcommand{\cmark}{\green{\ding{51}}}
-\newcommand{\xmark}{\red{\ding{55}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{subfig}
 
@@ -60,10 +55,6 @@
 
 \usepackage{tikz}
 \usetikzlibrary{positioning, mindmap, shadows, calc, arrows.meta, backgrounds, fit, shapes}
-
-
-\newcommand{\push}{\texttt{Push}}
-\newcommand{\pop}{\texttt{Pop}}
 
 \newcommand{\titletext}{Specification and Implementation of Replicated List}
 
