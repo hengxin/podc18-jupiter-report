@@ -12,19 +12,26 @@
     {\large CJupiter maintains an \red{$n$-ary ordered state space} for each replica.}
   \end{center}
 
-  \fignocaption{width = 0.50\textwidth}{figs/cjupiter-allinone}
+  \fignocaption{width = 0.40\textwidth}{figs/cjupiter-allinone}
+
+  \begin{center}
+     Nodes represent states
+
+     Edges are labeled with operations.
+
+     Edges from the same node are totally ordered by associated operations.
+  \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
   \begin{center}
-    \begin{prop}
+    \begin{prop}[$n + 1 \to 1$ (Informal)]
       {\large At a high level, CJupiter maintains only \red{one} $n$-ary ordered state space.}
     \end{prop}
 
     \resizebox{0.50\textwidth}{!}{\input{tikz/cjupiter-allinone-path}}
-    % \fignocaption{width = 0.45\textwidth}{figs/cjupiter-allinone-path}
 
     \uncover<2->{Each replica behavior corresponds to a \red{path} going through this state space.}
   \end{center}
@@ -34,12 +41,22 @@
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
   \begin{Theorem}[Equivalence]
-    equiv
+    Under the same schedule, the behaviors of corresponding replicas in CJupiter and Jupiter are the same.
   \end{Theorem}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
+  \pause
+  \vspace{0.30cm}
+  \centerline{\large At the server side:}
+  \begin{prop}[$n \leftrightarrow 1$ (Informal)]
+    The single $n$-ary ordered state space at the server side in CJupiter 
+    is a \red{compact representation} of $n$ $2D$ state spaces at the server side in Jupiter.
+  \end{prop}
+
+  \pause
+  \vspace{0.30cm}
+  \centerline{\large At the client side:}
+  \begin{prop}[$1 \leftrightarrow 1$ (Informal)]
+    Jupiter is \red{slightly optimized in implementation} at clients by eliminating redundant OTs than CJupiter.
+  \end{prop}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%

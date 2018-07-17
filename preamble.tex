@@ -56,6 +56,11 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning, mindmap, shadows, calc, arrows.meta, backgrounds, fit, shapes}
 
+\newcommand*{\circled}[2][]{\tikz[baseline=(C.base)]{
+    \node[inner sep = 0pt] (C) {\vphantom{1g}#2};
+    \node[draw, circle, inner sep = 3pt, yshift = 1pt, fill = red!40, opacity = 0.5]
+        at (C.center) {\vphantom{1g}};}}
+
 \newcommand{\titletext}{Specification and Implementation of Replicated List}
 
 \newcommand{\thankyou}{

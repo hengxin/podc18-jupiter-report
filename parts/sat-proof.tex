@@ -1,2 +1,90 @@
 % file: parts/sat-proof.tex
 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\teal{\Large \red{CJupiter} satisfies the weak list specification.}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \begin{center}
+    {\large We study \blue{a single $n$-ary ordered state space} $\text{CSS}_{s}$ at the server \\ which provides a global view of all possible replica states.}
+  \end{center}
+
+  \fignocaption{width = 0.45\textwidth}{figs/cjupiter-allinone-path}
+
+  \pause
+  \begin{center}
+    {\large To show the \red{pairwise state compatibility} property \blue{in three steps}.}
+  \end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\circled{1} Take any two nodes/states $v_1$ and $v_2$.}
+
+  \begin{lemma}[LCA (Lowest Common Ancestor)]
+    Each pair of states in the $n$-ary ordered state space has a \red{unique} LCA.
+  \end{lemma}
+
+  \begin{columns}
+    \column{0.60\textwidth}
+      \fignocaption{width = 0.50\textwidth}{figs/lca}
+      \column{0.30\textwidth}
+	\[
+	  v_0 = \text{LCA}(v_1, v_2)
+	\]
+  \end{columns}
+
+  % \fignocaption{width = 0.25\textwidth}{figs/lca}
+  % \[
+  %   v_0 = \text{LCA}(v_1, v_2)
+  % \]
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\circled{2} Consider the paths to $v_1$ and $v_2$ from their LCA $v_0$.}
+
+  \begin{lemma}[Disjoint Paths]
+    The set of operations $O_{v_0 \leadsto v_1}$ along $P_{v_0 \leadsto v_1}$ 
+    is \red{disjoint} from the set of operations $O_{v_0 \leadsto v_2}$ along $P_{v_0 \leadsto v_2}$.
+  \end{lemma}
+
+  \begin{columns}
+    \column{0.60\textwidth}
+	\fignocaption{width = 0.50\textwidth}{figs/disjoint-paths}
+      \column{0.30\textwidth}
+	\[
+	  v_0 = \text{LCA}(v_1, v_2)
+	\]
+  \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\circled{3} Consider the states in these two paths.}
+
+  \begin{lemma}[Compatible Paths]
+    Each pair of states consisting of one state in $P_{v_0 \leadsto v_1}$ and the other in $P_{v_0 \leadsto v_2}$ are \red{compatible}.
+  \end{lemma}
+
+  \begin{columns}
+    \column{0.60\textwidth}
+	\fignocaption{width = 0.50\textwidth}{figs/disjoint-paths}
+      \column{0.40\textwidth}
+	\[
+	  v_0 = \text{LCA}(v_1, v_2)
+	\]
+
+	\vspace{0.50cm}
+	\begin{center}
+	  {In particular, \\ $v_1$ and $v_2$ are compatible.}
+	\end{center}
+  \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
