@@ -53,6 +53,12 @@
   \end{figure}
 }
 
+\usepackage[natbib = true, backend = bibtex, style = authoryear]{biblatex}
+% \usepackage[backend = biber, style = authoryear]{biblatex}
+\addbibresource{podc18-jupiter-report.bib}
+
+\newcommand{\ncite}[1]{\violet{\footnotesize [\cite{#1}]}}
+
 \usepackage{tikz}
 \usetikzlibrary{positioning, mindmap, shadows, calc, arrows.meta, backgrounds, fit, shapes}
 

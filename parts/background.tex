@@ -65,7 +65,7 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \begin{definition}[Eventual Convergence (EC)~\cite{}]
+  \begin{definition}[Eventual Convergence (EC)~\ncite{Ellis:SIGMOD89}]
     The lists at all replicas are identical \purple{\it at quiescence}.
   \end{definition}
 
@@ -73,7 +73,7 @@
   \fignocaption{width = 0.25\textwidth}{figs/specs}
   \vspace{-0.50cm}
 
-  \begin{definition}[Strong Eventual Consistency (SEC)~\cite{}]
+  \begin{definition}[Strong Eventual Consistency (SEC)~\ncite{Shapiro:SSS11}]
     The lists at the replicas that \purple{\it have executed the same set of user operations} are identical.
   \end{definition}
 
@@ -89,19 +89,17 @@
 
   \vspace{0.30cm}
   \begin{center}
-    \red{\large Strong/Weak List Specification~\cite{}} \\[6pt]
+    \red{\large Strong/weak list specification}~\ncite{Attiya:PODC16} \\[6pt]
     \teal{Specify global properties on all (intermediate) states at all replicas.}
   \end{center}
 
   \pause
   \vspace{0.30cm}
   \begin{center}
-    \begin{minipage}{0.70\textwidth}
-      \begin{description}
-	\item[Proved:] RGA~\cite{Roh:JPDC11} satisfies the strong list spec.
-	\item[Conjecture:] \textsl{\red{Jupiter}}~\cite{Nichols:UIST95} satisfies the weak list spec.
-      \end{description}
-    \end{minipage}
+    \begin{description}
+      \item[Proved:] RGA~\ncite{Roh:JPDC11} satisfies the strong list spec.
+      \item[Conjecture:] \textsl{\red{Jupiter}}~\ncite{Nichols:UIST95} satisfies the weak list spec.
+    \end{description}
   \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
