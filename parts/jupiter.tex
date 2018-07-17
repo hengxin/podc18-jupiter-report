@@ -30,27 +30,19 @@
 \begin{frame}{}
   \centerline{OT (Operational Transformation)~\cite{}}
 
-  \pause
-  \begin{columns}
-    \column{0.40\textwidth}
+  \begin{columns}[c]
+    \column{0.50\textwidth}
       \begin{center}
-	\input{tikz/no-ot-tcs06-tikz}
+	\input{tikz/ot-tcs06-tikz-more}
       \end{center}
-    \column{0.40\textwidth}
-      \begin{center}
-	\input{tikz/ot-tcs06-tikz}
-      \end{center}
+    \column{0.50\textwidth}
+      \uncover<6->{
+	\fignocaption{width = 0.65\textwidth}{figs/ot}
+	\[
+	  \sigma; o_1; o_2' \equiv \sigma; o_2; o_1'
+	\]
+      }
   \end{columns}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-  \fignocaption{width = 0.40\textwidth}{figs/ot}
-
-  \[
-    \sigma; o_1; o_2' \equiv \sigma; o_2; o_1'~\cite{}
-  \]
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
@@ -61,13 +53,21 @@
     to manage how and when to perform OTs.}
   \end{center}
 
-  fig here
+  \fignocaption{width = 0.35\textwidth}{figs/2d-statespace}
+
+  \begin{center} 
+    \pause
+    Nodes represent states. \quad Edges are labeled with operations.
+
+    \pause
+    \red{$2D$}: An operation from the same node is either \textsc{Local} or \textsc{Global}. 
+  \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\large Consider a replicated system with $n$ clients.}
+  \centerline{\large Consider a replicated system with $n \; (=3)$ clients.}
 
   \fignocaption{width = 0.50\textwidth}{figs/jupiter-schedule}
 \end{frame}
@@ -77,15 +77,9 @@
 \begin{frame}{}
   \centerline{\large Each \red{client} maintains a $2D$ state space.}
 
-  \fignocaption{width = 0.65\textwidth}{figs/jupiter-illustration-client3-notations}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
+  \fignocaption{width = 0.50\textwidth}{figs/jupiter-illustration-client3-notations}
 
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-  \centerline{\large The \red{server} maintains $n$ $2D$ state spaces, one for each client.}
-
-  \fignocaption{width = 0.65\textwidth}{figs/jupiter-illustration-client3-notations}
+  \centerline{\large The \red{server} maintains $n \; (=3)$ $2D$ state spaces, one for each client.}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 

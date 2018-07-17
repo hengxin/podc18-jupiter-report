@@ -1,0 +1,35 @@
+% file: parts/list-ot.tex
+
+\newcommand{\ldel}{\textsc{Del}}	% List DEL
+\newcommand{\lins}{\textsc{Ins}}	% List INS
+\newcommand{\ldelop}[2]{\ldel\left(#1, #2\right)}  % #1: index, #2: priority
+\newcommand{\linsop}[3]{\lins\left(#1, #2, #3\right)}  % #1: index, #2: element, #3: priority
+
+%%%%%%%%%% list-ot.tex %%%%%%%%%% 
+\begin{align*}
+  % ins vs. ins
+  OT\Big(\lins(a_1, p_1, pr_1), \lins(a_2, p_2, pr_2)\Big) &= \begin{cases}
+    \lins(a_1, p_1, pr_1) 		& p_1 < p_2 \\[3pt]
+    \lins(a_1, p_1 + 1, pr_1) 		& p_1 > p_2 \\[3pt]
+    \textsc{NOP} 			& p_1 = p_2 \land a_1 = a_2 \\[3pt]
+    \lins(a_1, p_1 + 1, pr_1) 		& p_1 = p_2 \land a_1 \neq a_2 \land pr_1 > pr_2 \\[3pt]
+    \lins(a_1, p_1, pr_1)		& p_1 = p_2 \land a_1 \neq a_2 \land pr_1 \le pr_2
+  \end{cases} \\[10pt]
+  % ins vs. del
+  OT\Big(\lins(a_1, p_1, pr_1), \ldel(\_, p_2, pr_2)\Big) &= \begin{cases}
+    \lins(a_1, p_1, pr_1) 		& p_1 \le p_2 \\[3pt]
+    \lins(a_1, p_1 - 1, pr_1) 		& p_1 > p_2
+  \end{cases} \\[10pt]
+  % del vs. ins
+  OT\Big(\ldel(\_, p_1, pr_1), \lins(a_2, p_2, pr_2)\Big) &= \begin{cases}
+    \ldel(\_, p_1, pr_1) 		& p_1 < p_2 \\[3pt]
+    \ldel(\_, p_1 + 1, pr_1) 		& p_1 \ge p_2
+  \end{cases} \\[10pt]
+  % del vs. del
+  OT\Big(\ldel(\_, p_1, pr_1), \ldel(\_, p_2, pr_2)\Big) &= \begin{cases}
+    \ldel(\_, p_1, pr_1) 		& p_1 < p_2 \\[3pt]
+    \ldel(\_, p_1 - 1, pr_1) 		& p_1 > p_2 \\[3pt]
+    \textsc{NOP}			& p_1 = p_2
+  \end{cases} \\
+\end{align*}
+%%%%%%%%%% list-ot.tex %%%%%%%%%% 
