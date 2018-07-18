@@ -14,7 +14,7 @@
 	\input{tikz/jupiter-cs-tikz}
       \end{center}
     \column{0.45\textwidth}
-      System model of Jupiter: \\[5pt]
+      System model of Jupiter~\ncite{Nichols:UIST95}: \\[5pt]
       \begin{itemize}
 	\setlength{\itemsep}{10pt}
 	\item<1-> client-server architecture
@@ -32,16 +32,13 @@
 
   \begin{columns}[c]
     \column{0.50\textwidth}
-      \begin{center}
-	\input{tikz/ot-tcs06-tikz-more}
-      \end{center}
+      \fignocaption{width = 0.70\textwidth}{figs/ot-tcs06}
     \column{0.50\textwidth}
-      \uncover<6->{
-	\fignocaption{width = 0.65\textwidth}{figs/ot}
-	\[
-	  \sigma; o_1; o_2' \equiv \sigma; o_2; o_1'
-	\]
-      }
+      \pause
+      \fignocaption{width = 0.65\textwidth}{figs/ot}
+      \[
+	\sigma; o_1; o_2' \equiv \sigma; o_2; o_1'
+      \]
   \end{columns}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
@@ -67,14 +64,6 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\large Consider a replicated system with $n \; (=3)$ clients.}
-
-  \fignocaption{width = 0.50\textwidth}{figs/jupiter-schedule}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
   \centerline{\large Each \red{client} maintains a $2D$ state space.}
 
   \fignocaption{width = 0.50\textwidth}{figs/jupiter-illustration-client3-notations}
@@ -88,7 +77,9 @@
   \begin{center}
     {\large \red{Global property} on all replica states \\ specified by the \blue{weak list specification}}
 
+    \vspace{0.20cm}
     \fignocaption{width = 0.30\textwidth}{figs/mismatch}
+    \vspace{0.20cm}
 
     {\large \red{Local view} each replica maintains in \blue{Jupiter}}
   \end{center}

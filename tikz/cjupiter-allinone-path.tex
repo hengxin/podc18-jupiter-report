@@ -30,41 +30,43 @@
 \tikzset{path/.style = {draw, rounded corners, ultra thick, #1}}
 
 \begin{tikzpicture}
-  \statesplit{0}{\epsilon}{}
-  \statesplit{1}{x}{below = of 0}
-  \transition{0}{1}{1: \ins{x}{0}}
+  \uncover<1->{
+    \statesplit{0}{\epsilon}{}
+    \statesplit{1}{x}{below = of 0}
+    \transition{0}{1}{1: \ins{x}{0}}
 
-  \statesplit{12}{\epsilon}{below left = of 1}
-  \statesplit{13}{ax}{below right = of 1}
-  % \statesplit{123}{a}{below = 2.1*\vdist of 1}
-  \statesplit{123}{a}{below right = of 12}
-  \transition{1}{12}{2: \del{x}{0}}
-  \transition{1}{13}{3: \ins{a}{0}}
-  \transition{12}{123}{3: \ins{a}{0}}
-  \transition{13}{123}{2: \del{x}{1}}
+    \statesplit{12}{\epsilon}{below left = of 1}
+    \statesplit{13}{ax}{below right = of 1}
+    % \statesplit{123}{a}{below = 2.1*\vdist of 1}
+    \statesplit{123}{a}{below right = of 12}
+    \transition{1}{12}{2: \del{x}{0}}
+    \transition{1}{13}{3: \ins{a}{0}}
+    \transition{12}{123}{3: \ins{a}{0}}
+    \transition{13}{123}{2: \del{x}{1}}
 
-  % \statesplit{14}{xb}{right = 1.5*\vdist of 13}
-  % \transition{1}{14}{4: \ins{b}{1}}
+    % \statesplit{14}{xb}{right = 1.5*\vdist of 13}
+    % \transition{1}{14}{4: \ins{b}{1}}
 
-  % \statesplit{124}{b}{right = 2.1*\hdist of 123}
-  \statesplit{124}{b}{below right = of 13}
-  \transition[near end]{12}{124}{4: \ins{b}{0}}
-  
-  % \statesplit{1234}{ba}{below = 2*\vdist of 13}
-  \statesplit{1234}{ba}{below right = of 123}
-  \transition{124}{1234}{3: \ins{a}{1}}
-  \transition{123}{1234}{4: \ins{b}{0}}
+    % \statesplit{124}{b}{right = 2.1*\hdist of 123}
+    \statesplit{124}{b}{below right = of 13}
+    \transition[near end]{12}{124}{4: \ins{b}{0}}
+    
+    % \statesplit{1234}{ba}{below = 2*\vdist of 13}
+    \statesplit{1234}{ba}{below right = of 123}
+    \transition{124}{1234}{3: \ins{a}{1}}
+    \transition{123}{1234}{4: \ins{b}{0}}
 
-  \statesplit{14}{xb}{above right = of 124}
-  \transition{1}{14}{4: \ins{b}{1}}
-  \transition{14}{124}{2: \del{x}{0}}
+    \statesplit{14}{xb}{above right = of 124}
+    \transition{1}{14}{4: \ins{b}{1}}
+    \transition{14}{124}{2: \del{x}{0}}
+  }
 
-  \pause
-
-  \path[path = {red}] ($(0.north) + (135:20pt)$) node[left] 
-  	(sc1) {$S, C_1$} -- ++(-90:2.5*\vdist) -- ++(-135:2.5*\vdist) -- ++(-45:5.2*\vdist); % -- ++(-50:2.6*\vdist);
-  \path[path = {blue}] ($(0.north) + (100:20pt)$) node[above = 0pt] 
-  	(c2) {$C_2$} -- ++(-90:2.7*\vdist) -- ++(-45:2.5*\vdist) -- ++(-135:2.2*\vdist) -- ++(-45:2.4*\vdist);
-  \path[path = {teal}] ($(0.north) + (60:15pt)$) node[right] 
-  	(c3) {$C_3$} -- ++(-90:2.5*\vdist) -- ++(-18:5.5*\vdist) -- ++(-135:5.0*\vdist);
+  \uncover<2->{
+    \path[path = {red}] ($(0.north) + (135:20pt)$) node[left] 
+	  (sc1) {$S, C_1$} -- ++(-90:2.5*\vdist) -- ++(-135:2.5*\vdist) -- ++(-45:5.2*\vdist); % -- ++(-50:2.6*\vdist);
+    \path[path = {blue}] ($(0.north) + (100:20pt)$) node[above = 0pt] 
+	  (c2) {$C_2$} -- ++(-90:2.7*\vdist) -- ++(-45:2.5*\vdist) -- ++(-135:2.2*\vdist) -- ++(-45:2.4*\vdist);
+    \path[path = {teal}] ($(0.north) + (60:15pt)$) node[right] 
+	  (c3) {$C_3$} -- ++(-90:2.5*\vdist) -- ++(-18:5.5*\vdist) -- ++(-135:5.0*\vdist);
+  }
 \end{tikzpicture}

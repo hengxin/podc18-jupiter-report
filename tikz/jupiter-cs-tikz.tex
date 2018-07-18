@@ -26,27 +26,31 @@
     timeline/.style = {very thick}, >=Stealth, 
     op/.style = {font = \small, above left = -0.20cm and -0.40cm of #1, sloped},
     replica/.style = {align = center}]
-  \node[replica] (\s) {\textcolor{brown}{$S$}};
-  \node[replica, right = of s] (c1) {$\textcolor{brown}{C_1}$};
-  \node[replica, right = of c1] (c2) {$\textcolor{brown}{C_2}$};
-  \node[replica, right = of c2] (c3) {$\textcolor{brown}{C_3}$};
+  \uncover<1->{
+    \node[replica] (\s) {\textcolor{brown}{$S$}};
+    \node[replica, right = of s] (c1) {$\textcolor{brown}{C_1}$};
+    \node[replica, right = of c1] (c2) {$\textcolor{brown}{C_2}$};
+    \node[replica, right = of c2] (c3) {$\textcolor{brown}{C_3}$};
 
-  \foreach \r/\rbot in {s/sbot, c1/c1bot, c2/c2bot, c3/c3bot} {
-	\node[below = 5.0cm of \r] (\rbot) {};
-	\draw[timeline] (\r) to (\rbot);
+    \foreach \r/\rbot in {s/sbot, c1/c1bot, c2/c2bot, c3/c3bot} {
+	  \node[below = 5.0cm of \r] (\rbot) {};
+	  \draw[timeline] (\r) to (\rbot);
+    }
   }
 
-  \pause
-  % Clients send messages (ordered by positions at server) to the server
-  \csend{c1}{0.15}{0.20}{1}{x}{x}
-  \csend{c1}{0.35}{0.40}{2}{}{}
-  \csend{c2}{0.45}{0.55}{3}{ax}{a}
-  \csend{c3}{0.50}{0.75}{4}{xb}{}
+  \uncover<2->{
+    % Clients send messages (ordered by positions at server) to the server
+    \csend{c1}{0.15}{0.20}{1}{x}{x}
+    \csend{c1}{0.35}{0.40}{2}{}{}
+    \csend{c2}{0.45}{0.55}{3}{ax}{a}
+    \csend{c3}{0.50}{0.75}{4}{xb}{}
+  }
 
-  \pause
-  % Operations are totally ordered at the server.
-  \foreach \num/\pos in {1/0.20, 2/0.40, 3/0.55, 4/0.75} {
-    \node [seq = 0.80, fill = red!40] at ($(\s)!\pos!(\s\b)$) {$\num$};
+  \uncover<3->{
+    % Operations are totally ordered at the server.
+    \foreach \num/\pos in {1/0.20, 2/0.40, 3/0.55, 4/0.75} {
+      \node [seq = 0.80, fill = red!40] at ($(\s)!\pos!(\s\b)$) {$\num$};
+    }
   }
 
   % \node (o1) [op = {1}, rotate = 7] {};
@@ -54,18 +58,19 @@
   % \node (o3) [op = {3}, rotate = 8] {};
   % \node (o4) [op = {4}, rotate = 15] {};
 
-  \pause
-  % The server sends messages (ordered by positions at server) to clients.
-  \ssend{c2}{0.40}{0.65}{2}{a}
-  \ssend{c3}{0.40}{0.70}{2}{b}
+  \uncover<4->{
+    % The server sends messages (ordered by positions at server) to clients.
+    \ssend{c2}{0.40}{0.65}{2}{a}
+    \ssend{c3}{0.40}{0.70}{2}{b}
 
-  \ssend{c2}{0.20}{0.30}{1}{x}
-  \ssend{c3}{0.20}{0.25}{1}{x}
+    \ssend{c2}{0.20}{0.30}{1}{x}
+    \ssend{c3}{0.20}{0.25}{1}{x}
 
 
-  \ssend{c1}{0.55}{0.60}{3}{a}
-  \ssend{c3}{0.55}{0.90}{3}{}
+    \ssend{c1}{0.55}{0.60}{3}{a}
+    \ssend{c3}{0.55}{0.90}{3}{}
 
-  \ssend{c1}{0.75}{0.90}{4}{}
-  \ssend{c2}{0.75}{0.90}{4}{}
+    \ssend{c1}{0.75}{0.90}{4}{}
+    \ssend{c2}{0.75}{0.90}{4}{}
+  }
 \end{tikzpicture}

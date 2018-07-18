@@ -55,6 +55,7 @@
 
 \usepackage[natbib = true, backend = bibtex, style = authoryear]{biblatex}
 % \usepackage[backend = biber, style = authoryear]{biblatex}
+\setbeamertemplate{bibliography item}[article]
 \addbibresource{podc18-jupiter-report.bib}
 
 \newcommand{\ncite}[1]{\violet{\footnotesize [\cite{#1}]}}
@@ -70,7 +71,14 @@
 \newcommand{\titletext}{Specification and Implementation of Replicated List}
 
 \newcommand{\thankyou}{
-  \begin{frame}[noframenumbering]{}
-    \fignocaption{width = 0.50\textwidth}{figs/thankyou.png}
+  \begin{frame}{}
+    \begin{columns}
+      \column{0.50\textwidth}
+	\fignocaption{width = 0.80\textwidth}{figs/thankyou}
+      \column{0.50\textwidth}
+	\fignocaption{width = 0.70\textwidth}{figs/qa-green}
+    \end{columns}
   \end{frame}
 }
+
+\usepackage{appendixnumberbeamer}

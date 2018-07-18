@@ -51,7 +51,7 @@
       \begin{description}
 	\setlength{\itemsep}{10pt}
 	\item[$\textsc{Ins}(a, p):$] Insert $a$ at position $p$.
-	\item[$\textsc{Del}(p):$] Delete an element at position $p$.
+	\item[$\textsc{Del}(p):$] Delete the element at position $p$.
 	\item[$\textsc{Read}:$] Return the list.
       \end{description}
     \end{minipage}
@@ -90,15 +90,15 @@
   \vspace{0.30cm}
   \begin{center}
     \red{\large Strong/weak list specification}~\ncite{Attiya:PODC16} \\[6pt]
-    \teal{Specify global properties on all (intermediate) states at all replicas.}
+    \teal{Specify global properties on all states at all replicas.}
   \end{center}
 
   \pause
   \vspace{0.30cm}
   \begin{center}
     \begin{description}
-      \item[Proved:] RGA~\ncite{Roh:JPDC11} satisfies the strong list spec.
-      \item[Conjecture:] \textsl{\red{Jupiter}}~\ncite{Nichols:UIST95} satisfies the weak list spec.
+      \item[Proved:] RGA~\ncite{Roh:JPDC11} satisfies the strong list specification.
+      \item[Conjecture:] \red{Jupiter}~\ncite{Nichols:UIST95} satisfies the weak list specification.
     \end{description}
   \end{center}
 \end{frame}

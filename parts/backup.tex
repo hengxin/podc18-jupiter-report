@@ -1,5 +1,7 @@
 % file: parts/backup.tex
 
+\appendix
+
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
   \centerline{\teal{\Huge Backup}}
@@ -16,7 +18,7 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{OT (Operational Transformation)}
+  \centerline{OT (Operational Transformation)~\ncite{Ellis:SIGMOD89}}
 
   \begin{columns}
     \column{0.40\textwidth}
@@ -40,5 +42,13 @@
       \input{parts/list-ot}
     \end{minipage}
   }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\large Consider a replicated system with $n \; (=3)$ clients.}
+
+  \fignocaption{width = 0.50\textwidth}{figs/jupiter-schedule}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
