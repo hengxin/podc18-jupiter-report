@@ -13,7 +13,6 @@
 
   \begin{figure}
     \centering
-    % \caption{\large \teal{Collaborative Text Editing Systems}}
 
     \subfloat[Google Docs]{\includegraphics[width = 0.25\textwidth]{figs/google-docs-suite}} \hfil
     \subfloat[Apache Wave]{\includegraphics[width = 0.25\textwidth]{figs/google-wave}} \\[12pt]
@@ -33,11 +32,11 @@
 
   \pause
   \vspace{-0.50cm}
-  \begin{itemize}
-    \centering
-    \item Replicas respond to user operations \red{immediately}
-    \item Updates are propagated \red{asynchronously}
-  \end{itemize}
+  \begin{center}
+    Replicas respond to user operations \red{immediately}  \\[6pt]
+
+    Updates are propagated \red{asynchronously}
+  \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
@@ -69,32 +68,33 @@
     The lists at all replicas are identical \purple{\it at quiescence}.
   \end{definition}
 
-  \vspace{-0.30cm}
-  \fignocaption{width = 0.25\textwidth}{figs/specs}
-  \vspace{-0.50cm}
+  \vspace{0.50cm}
+
+  % \vspace{-0.50cm}
+  % \fignocaption{width = 0.25\textwidth}{figs/specs}
+  % \vspace{-0.50cm}
 
   \begin{definition}[Strong Eventual Consistency (SEC)~\ncite{Shapiro:SSS11}]
     The lists at the replicas that \purple{\it have executed the same set of user operations} are identical.
   \end{definition}
 
   \pause
-  \vspace{0.50cm}
+  \vspace{1.00cm}
   \centerline{\red{\large Specify little on \teal{\it intermediate states} going through by replicas.}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \fignocaption{width = 0.80\textwidth}{figs/podc16-attiya}
-
-  \vspace{0.30cm}
   \begin{center}
     \red{\large Strong/weak list specification}~\ncite{Attiya:PODC16} \\[6pt]
-    {Specify global properties on all states at all replicas.}
+    \teal{Specify global properties on all states at all replicas.}
   \end{center}
 
+  \fignocaption{width = 0.80\textwidth, frame}{figs/podc16-attiya}
+
   \pause
-  \vspace{0.30cm}
+  \vspace{0.50cm}
   \begin{center}
     \begin{description}
       \item[Proved:] RGA~\ncite{Roh:JPDC11} satisfies the strong list specification.

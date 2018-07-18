@@ -79,3 +79,24 @@
   \fignocaption{width = 0.50\textwidth}{figs/jupiter-schedule}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \begin{Theorem}[Equivalence of CJupiter and Jupiter]
+    Under the same schedule, the behaviors of corresponding replicas in CJupiter and Jupiter are the same.
+  \end{Theorem}
+
+  \vspace{0.30cm}
+  \centerline{\large At the server side:}
+  \begin{prop}[$n \leftrightarrow 1$ (Informal)]
+    The single $n$-ary ordered state space at the server side in CJupiter 
+    is a \red{compact representation} of $n$ $2D$ state spaces at the server side in Jupiter.
+  \end{prop}
+
+  \vspace{0.30cm}
+  \centerline{\large At the client side:}
+  \begin{prop}[$1 \leftrightarrow 1$ (Informal)]
+    Jupiter is \red{slightly optimized in implementation} at clients by eliminating redundant OTs than CJupiter.
+  \end{prop}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%

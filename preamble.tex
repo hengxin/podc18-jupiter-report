@@ -43,8 +43,12 @@
 \newcommand{\bbox}[1]{\blue{\boxed{#1}}}
 \newcommand{\pbox}[1]{\purple{\boxed{#1}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[linewidth = 1pt, framemethod = TikZ]{mdframed}
+\mdfsetup{frametitlealignment=\center}
+
 \usepackage{subfig}
 
+\usepackage[export]{adjustbox}
 % for fig without caption: #1: width/size; #2: fig file
 \newcommand{\fignocaption}[2]{
   \begin{figure}[htp]

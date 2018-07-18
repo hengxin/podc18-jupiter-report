@@ -16,7 +16,7 @@
 
   \begin{center} 
     \pause
-    There can be more than two edges coming from the same node. \\[6pt]
+    There can be \red{more than two edges} coming from the same node. \\[6pt]
     \pause
     Edges from the same node are \red{totally ordered} by associated operations.
   \end{center}
@@ -26,7 +26,7 @@
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
   \begin{center}
-    \begin{prop}[$n + 1 \to 1$ (Informal)]
+    \begin{prop}[Compactness of CJupiter (Informal)]
       {\large At a high level, CJupiter maintains only \red{one} $n$-ary ordered state space.}
     \end{prop}
 
@@ -39,22 +39,11 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \begin{Theorem}[Equivalence]
+  \begin{Theorem}[Equivalence of CJupiter and Jupiter]
     Under the same schedule, the behaviors of corresponding replicas in CJupiter and Jupiter are the same.
   \end{Theorem}
 
-  \pause
-  \vspace{0.30cm}
-  \centerline{\large At the server side:}
-  \begin{prop}[$n \leftrightarrow 1$ (Informal)]
-    The single $n$-ary ordered state space at the server side in CJupiter 
-    is a \red{compact representation} of $n$ $2D$ state spaces at the server side in Jupiter.
-  \end{prop}
-
-  \vspace{0.30cm}
-  \centerline{\large At the client side:}
-  \begin{prop}[$1 \leftrightarrow 1$ (Informal)]
-    Jupiter is \red{slightly optimized in implementation} at clients by eliminating redundant OTs than CJupiter.
-  \end{prop}
+  \vspace{1.0cm}
+  \centerline{Proved from the perspectives of both the server and clients.}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
