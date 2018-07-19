@@ -2,47 +2,29 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\Huge \teal{Background for the Conjecture}}
+  \centerline{\Huge \teal{Background}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\large \teal{Collaborative Text Editing Systems}}
-  \vspace{-0.60cm}
+  \centerline{\large \teal{\red{Replicated}, highly available collaborative text editing systems}}
 
-  \begin{figure}
-    \centering
-
-    \subfloat[Google Docs]{\includegraphics[width = 0.25\textwidth]{figs/google-docs-suite}} \hfil
-    \subfloat[Apache Wave]{\includegraphics[width = 0.25\textwidth]{figs/google-wave}} \\[12pt]
-
-    \subfloat[Wikipedia]{\includegraphics[width = 0.20\textwidth]{figs/wikipedia}}  \hfil
-    \subfloat[\LaTeX{} Editor]{\includegraphics[width = 0.32\textwidth]{figs/sharelatex}}
-  \end{figure}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-  \centerline{\Large \teal{Replication {\normalsize (for availability)}}}
-  \vspace{-0.20cm}
-  
-  \fignocaption{width = 0.50\textwidth}{figs/googledoc-replication}
+  \fignocaption{width = 0.55\textwidth}{figs/coeditor}
 
   \pause
   \vspace{-0.50cm}
   \begin{center}
-    Replicas respond to user operations \red{immediately}  \\[6pt]
+    Replicas are required to respond to user operations \red{immediately}.  \\[3pt]
 
-    Updates are propagated \red{asynchronously}
+    Updates are propagated to other replicas \red{asynchronously}.
   \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\Large \teal{List: to model the core functionality}}
+  \centerline{\Large \red{Replicated list object}: to model the core functionality}
   \vspace{0.30cm}
 
   \begin{center}
@@ -55,10 +37,6 @@
       \end{description}
     \end{minipage}
   \end{center}
-
-  \pause
-  \vspace{0.80cm}
-  \centerline{\large \red{To implement a highly available \blue{\Large replicated list} object.}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
@@ -78,7 +56,6 @@
     The lists at the replicas that \purple{\it have executed the same set of user operations} are identical.
   \end{definition}
 
-  \pause
   \vspace{1.00cm}
   \centerline{\red{\large Specify little on \teal{\it intermediate states} going through by replicas.}}
 \end{frame}

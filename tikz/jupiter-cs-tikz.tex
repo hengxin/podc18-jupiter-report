@@ -47,7 +47,7 @@
     \csend{c3}{0.50}{0.75}{4}{xb}{}
   }
 
-  \uncover<3->{
+  \uncover<2->{
     % Operations are totally ordered at the server.
     \foreach \num/\pos in {1/0.20, 2/0.40, 3/0.55, 4/0.75} {
       \node [seq = 0.80, fill = red!40] at ($(\s)!\pos!(\s\b)$) {$\num$};
@@ -59,7 +59,7 @@
   % \node (o3) [op = {3}, rotate = 8] {};
   % \node (o4) [op = {4}, rotate = 15] {};
 
-  \uncover<4->{
+  \uncover<2->{
     % The server sends messages (ordered by positions at server) to clients.
     \ssend{c2}{0.40}{0.65}{2}{a}
     \ssend{c3}{0.40}{0.70}{2}{b}

@@ -16,8 +16,7 @@
 
   \begin{center} 
     \pause
-    There can be \red{more than two edges} coming from the same node. \\[6pt]
-    \pause
+    There can be \red{more than two edges} coming from the same node. \\[5pt]
     Edges from the same node are \red{totally ordered} by associated operations.
   \end{center}
 \end{frame}
@@ -30,9 +29,10 @@
       {\large At a high level, CJupiter maintains only \red{one} $n$-ary ordered state space.}
     \end{prop}
 
-    \resizebox{0.50\textwidth}{!}{\input{tikz/cjupiter-allinone-path}}
+    % \resizebox{0.50\textwidth}{!}{\input{tikz/cjupiter-allinone-path}}
+    \fignocaption{width = 0.40\textwidth}{figs/cjupiter-allinone-path}
 
-    \uncover<2->{Each replica behavior corresponds to a \red{path} going through this state space.}
+    Each replica behavior corresponds to a \red{path} going through this state space.
   \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
@@ -44,6 +44,6 @@
   \end{Theorem}
 
   \vspace{1.0cm}
-  \centerline{Proved from the perspectives of both the server and clients.}
+  \centerline{\large From the perspectives of both the server and clients.}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%

@@ -8,27 +8,29 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \begin{columns}
-    \column{0.50\textwidth}
-      \begin{center}
-	\input{tikz/jupiter-cs-tikz}
-      \end{center}
-    \column{0.45\textwidth}
-      System model of Jupiter~\ncite{Nichols:UIST95}: \\[5pt]
-      \begin{itemize}
-	\setlength{\itemsep}{10pt}
-	\item<1-> client-server architecture
-	\item<2-> client $\xrightarrow[]{\quad \text{FIFO} \quad}$ server
-	\item<3-> totally ordered at the server
-	\item<4-> server $\xrightarrow[]{\quad \text{FIFO} \quad}$ client
-      \end{itemize}
-  \end{columns}
+  \centerline{\large Jupiter adopts the \red{client-server} architecture~\ncite{Nichols:UIST95}:}
+
+  \begin{center}
+    \begin{minipage}{0.50\textwidth}
+      \input{tikz/jupiter-cs-tikz}
+    \end{minipage}
+  \end{center}
+
+  \vspace{-1.00cm}
+  \uncover<2->{
+    \begin{center}
+      Operations are \red{totally ordered} at the server. \\[6pt]
+      Client $\xrightarrow[]{\quad \text{FIFO} \quad}$ server $\xrightarrow[]{\quad \text{FIFO} \quad}$ other clients
+    \end{center}
+  }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{OT (Operational Transformation)~\ncite{Ellis:SIGMOD89}}
+  \begin{center}
+    {\large Jupiter utilizes \red{OT}~\footnote{OT: Operational Transformation}~\ncite{Ellis:SIGMOD89} to achieve convergence.}
+  \end{center}
 
   \begin{columns}[c]
     \column{0.50\textwidth}
@@ -46,17 +48,14 @@
 \begin{frame}{}
   \begin{center}
     {\large Jupiter uses \red{$2D$ state spaces}~\ncite{Xu:CSCW14} \\
-    to manage how and when to perform OTs.}
+    to manage how and when to perform \red{OTs}.}
   \end{center}
 
   \fignocaption{width = 0.32\textwidth}{figs/2d-statespace}
 
+  \pause
   \begin{center} 
-    \pause
-    Nodes represent states. \quad Edges are labeled with operations. \\[6pt]
-    \pause
-    % \red{$2D$}: An operation from the same node is either \textsc{Local} or \textsc{Global}. 
-    There can be \red{$\le 2$ edges} coming from the same node, \small{\textsc{Local}} or {\small \textsc{Global}}.
+    There can be \red{$\le 2$ edges} coming from the same node ({\textsc{\footnotesize Local}} or \textsc{\footnotesize Global}).
   \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
@@ -65,7 +64,8 @@
 \begin{frame}{}
   \centerline{\large Each \red{client} maintains a $2D$ state space.}
 
-  \fignocaption{width = 0.50\textwidth}{figs/jupiter-illustration-client3-notations}
+  % \fignocaption{width = 0.50\textwidth}{figs/jupiter-illustration-client3-notations}
+  \fignocaption{width = 0.60\textwidth}{figs/jupiter-illustration}
 
   \centerline{\large The \red{server} maintains $n \; (=3)$ $2D$ state spaces, one for each client.}
 \end{frame}
