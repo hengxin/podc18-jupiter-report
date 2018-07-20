@@ -2,13 +2,13 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\Huge \teal{Background}}
+  \centerline{\Huge \teal{Replicated List}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
-  \centerline{\large \teal{\red{Replicated}, highly available collaborative text editing systems}}
+  \centerline{\teal{\large \red{Replicated}, highly available collaborative text editing systems}}
 
   \fignocaption{width = 0.55\textwidth}{figs/coeditor}
 
@@ -36,47 +36,6 @@
 	\item[$\textsc{Read}:$] Return the list.
       \end{description}
     \end{minipage}
-  \end{center}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-  \begin{definition}[Eventual Convergence (EC)~\ncite{Ellis:SIGMOD89}]
-    The lists at all replicas are identical \purple{\it at quiescence}.
-  \end{definition}
-
-  \vspace{0.50cm}
-
-  % \vspace{-0.50cm}
-  % \fignocaption{width = 0.25\textwidth}{figs/specs}
-  % \vspace{-0.50cm}
-
-  \begin{definition}[Strong Eventual Consistency (SEC)~\ncite{Shapiro:SSS11}]
-    The lists at the replicas that \purple{\it have executed the same set of user operations} are identical.
-  \end{definition}
-
-  \vspace{1.00cm}
-  \centerline{\red{\large Specify little on \teal{\it intermediate states} going through by replicas.}}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-  \begin{center}
-    \red{\large Strong/weak list specification}~\ncite{Attiya:PODC16} \\[6pt]
-    \teal{Specify global properties on all states at all replicas.}
-  \end{center}
-
-  \fignocaption{width = 0.80\textwidth, frame}{figs/podc16-attiya}
-
-  \pause
-  \vspace{0.50cm}
-  \begin{center}
-    \begin{description}
-      \item[Proved:] RGA~\ncite{Roh:JPDC11} satisfies the strong list specification.
-      \item[Conjecture:] \red{Jupiter}~\ncite{Nichols:UIST95} satisfies the weak list specification.
-    \end{description}
   \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%

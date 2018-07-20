@@ -29,31 +29,12 @@
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
   \begin{center}
-    {\large Jupiter utilizes \red{OT}~\footnote{OT: Operational Transformation}~\ncite{Ellis:SIGMOD89} to achieve convergence.}
-  \end{center}
-
-  \begin{columns}[c]
-    \column{0.50\textwidth}
-      \fignocaption{width = 0.70\textwidth}{figs/ot-tcs06}
-    \column{0.50\textwidth}
-      \fignocaption{width = 0.65\textwidth}{figs/ot}
-      \[
-	\sigma; o_1; o_2' \equiv \sigma; o_2; o_1'
-      \]
-  \end{columns}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{}
-  \begin{center}
-    {\large Jupiter uses \red{$2D$ state spaces}~\ncite{Xu:CSCW14} \\
-    to manage how and when to perform \red{OTs}.}
+    {\large To achieve convergence, Jupiter uses \red{$2D$ state spaces}~\ncite{Xu:CSCW14}
+    to manage how and when to perform \red{OTs}~\footnote{OT: Operational Transformation}~\ncite{Ellis:SIGMOD89}.}
   \end{center}
 
   \fignocaption{width = 0.32\textwidth}{figs/2d-statespace}
 
-  \pause
   \begin{center} 
     There can be \red{$\le 2$ edges} coming from the same node ({\textsc{\footnotesize Local}} or \textsc{\footnotesize Global}).
   \end{center}
@@ -74,7 +55,7 @@
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
   \begin{center}
-    {\large \red{Global property} on all replica states \\ specified by the \blue{weak list specification}}
+    {\large \red{Global property} on all replica states specified by \blue{\wlspec{}}}
 
     \vspace{0.20cm}
     \fignocaption{width = 0.30\textwidth}{figs/mismatch}

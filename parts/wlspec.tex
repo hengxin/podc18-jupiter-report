@@ -8,18 +8,38 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{}
+  \fignocaption{width = 0.80\textwidth, frame}{figs/podc16-attiya}
+
+  \vspace{0.20cm}
   \begin{definition}[Weak List Specification \wlspec{}~\ncite{Attiya:PODC16}]
     Informally, \wlspec{} requires the ordering between \red{elements that are not deleted} to be consistent across the system.
   \end{definition}
 
-  \pause
-  \vspace{1.00cm}
-  \centerline{\blue{\large Pairwise state compatibility property:}}
+  \vspace{0.60cm}
+  \centerline{\teal{\large Specify a global property on all states across the system.}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%
 
-  \vspace{0.50cm}
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+  \centerline{\blue{\Large Pairwise state compatibility property:}}
+
+  \vspace{0.40cm}
   \begin{quote}
-    For any pair of list states, there \red{cannot} be two elements $a$ and $b$ such that $a$ precedes $b$ in one state
+    For any \red{pair} of list states, there \red{cannot} be two elements $a$ and $b$ such that $a$ precedes $b$ in one state
     but $b$ precedes $a$ in the other.
   \end{quote}
+
+  \vspace{0.30cm}
+  \begin{columns}
+    \column{0.50\textwidth}
+      \fignocaption{width = 0.45\textwidth}{figs/ex-weak-list-spec}
+      \vspace{-0.60cm}
+      \fignocaption{width = 0.30\textwidth}{figs/red-cross}
+    \column{0.50\textwidth}
+      \fignocaption{width = 0.55\textwidth}{figs/ex-strong-list-spec}
+      \vspace{-0.60cm}
+      \fignocaption{width = 0.20\textwidth}{figs/green-check}
+  \end{columns}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%
